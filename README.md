@@ -19,4 +19,10 @@ gcloud builds submit
 cd bqtest
 gcloud builds submit
 ```
-5. get the cloudrun's url and test it with query parameter
+5. get the cloudrun's url and test it with query parameter and pre define path 
+```
+cliu@dev2:python/bq $ curl https://bq-query-by-id-gygrgrxnnq-uc.a.run.app/hello
+Hello World2!
+cliu@dev2:python/bq $ curl https://bq-query-by-id-gygrgrxnnq-uc.a.run.app\?id\=1
+"[{'id': '1', 'price': '$1.99', 'product': 'shirt'}, {'id': '1', 'price': '$1.99', 'product': 'shirt'}, {'id': '1', 'price': '$1.99', 'product': 'shirt'}, {'id': '1', 'price': '$1.99', 'product': 'shirt'}]"%
+```
